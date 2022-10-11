@@ -75,6 +75,14 @@ namespace System.Net.WebSockets
 
         /// <summary>
         /// Connects to a WebSocket server as an asynchronous operation.
+        /// The request has default headers:
+        /// VersionPolicy = RequestVersionExact
+        /// For HTTP/2 request:
+        /// :protocol = websocket
+        /// For HTTP/1.1 request:
+        /// Connection = Upgrade
+        /// Upgrade = websocket
+        /// Sec-WebSocket-Key = [generated key]
         /// </summary>
         /// <param name="uri">The URI of the WebSocket server to connect to.</param>
         /// <param name="cancellationToken">A cancellation token used to propagate notification that the operation should be canceled.</param>
@@ -86,6 +94,14 @@ namespace System.Net.WebSockets
 
         /// <summary>
         /// Connects to a WebSocket server as an asynchronous operation.
+        /// The request has default headers:
+        /// VersionPolicy = RequestVersionExact
+        /// For HTTP/2 request:
+        /// :protocol = websocket
+        /// For HTTP/1.1 request:
+        /// Connection = Upgrade
+        /// Upgrade = websocket
+        /// Sec-WebSocket-Key = [generated key]
         /// </summary>
         /// <param name="uri">The URI of the WebSocket server to connect to.</param>
         /// <param name="invoker">The <see cref="HttpMessageInvoker" /> instance to use for connecting.</param>
